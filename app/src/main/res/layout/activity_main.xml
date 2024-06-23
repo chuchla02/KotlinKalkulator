@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/gray"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/firstNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="50dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:hint="Pierwsza liczba"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/secondNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="50dp"
+        android:hint="Druga liczba"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.002"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/firstNumber" />
+
+    <GridLayout
+        android:id="@+id/operators"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/secondNumber"
+        android:layout_marginTop="80dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="parent">
+
+        <Button
+            android:id="@+id/addButton"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_marginLeft="90dp"
+            android:backgroundTint="#267C26"
+            android:text="+"
+
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/subtractButton"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textSize="25sp"
+            android:layout_marginLeft="10dp"
+            android:backgroundTint="#267C26"
+            android:layout_row="0"
+            android:layout_column="2"
+            />
+
+        <Button
+            android:id="@+id/divideButton"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:textSize="25sp"
+            android:layout_marginLeft="90dp"
+            android:backgroundTint="#267C26"
+            android:layout_row="1"
+            android:layout_column="1"
+            />
+
+        <Button
+            android:id="@+id/multiplyButton"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#267C26"
+            android:text="*"
+            android:textSize="25sp"
+            android:layout_marginLeft="10dp"
+            android:layout_row="1"
+            android:layout_column="2"
+            />
+
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Twój wynik to: "
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginTop="150dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/operators"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
